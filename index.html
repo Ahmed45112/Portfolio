@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed Mohamed — Portfolio BTS SIO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero { min-height: 88vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 2rem 3rem; gap: 3rem; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; animation: fadeUp .6s ease both; }
+    .eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 700; line-height: 1.05; letter-spacing: -.03em; margin-bottom: 1.2rem; animation: fadeUp .6s .1s ease both; }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero-desc { font-size: 1rem; color: var(--muted); line-height: 1.75; max-width: 440px; margin-bottom: 2rem; animation: fadeUp .6s .2s ease both; }
+    .hero-cta { display: flex; gap: .8rem; flex-wrap: wrap; animation: fadeUp .6s .3s ease both; }
+    .hero-visual { display: flex; align-items: center; justify-content: center; animation: fadeUp .6s .2s ease both; }
+    .avatar-card { background: var(--surface); border: 1px solid var(--border-light); border-radius: 24px; padding: 2.2rem 2.4rem; width: 100%; max-width: 360px; box-shadow: var(--shadow-lg); }
+    .avatar-ring { width: 92px; height: 92px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 2.1rem; font-weight: 700; color: #fff; margin: 0 auto 1.2rem; }
+    .avatar-card h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.1rem; text-align: center; margin-bottom: .2rem; }
+    .avatar-card .sub { text-align: center; color: var(--muted); font-size: .85rem; margin-bottom: 1.2rem; }
+    .badge-row { display: flex; gap: .4rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.2rem; }
+    .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+    .stat-box { background: var(--surface2); border: 1px solid var(--border-light); border-radius: 14px; padding: .8rem 1rem; text-align: center; }
+    .stat-box .num { font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--accent); }
+    .stat-box .lbl { font-size: .72rem; color: var(--muted); }
+    .quick-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; max-width: 900px; margin: 0 auto; padding: 2rem 3rem 4rem; }
+    .quick-link { display: flex; flex-direction: column; align-items: center; gap: .5rem; background: var(--surface); border: 1px solid var(--border-light); border-radius: 16px; padding: 1.6rem; text-decoration: none; color: var(--ink); transition: all .25s ease; }
+    .quick-link:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+    .quick-link .ql-icon { font-size: 2rem; }
+    .quick-link span { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: .92rem; }
+    .quick-link small { font-size: .75rem; color: var(--muted); text-align: center; }
+    .home-section-title { text-align: center; font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: .3rem; }
+    .home-section-sub { text-align: center; color: var(--muted); font-size: .9rem; margin-bottom: 2rem; }
+    @media(max-width:900px){
+      .hero { grid-template-columns: 1fr; padding: 4rem 1.4rem 2rem; text-align: center; }
+      .hero-desc { margin-left: auto; margin-right: auto; }
+      .hero-cta { justify-content: center; }
+      .quick-nav { padding: 1.5rem 1.4rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Ahmed<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="projets.html">Projets</a></li>
+    <li><a href="certificats.html">Certificats</a></li>
+    <li><a href="stage.html">Stage</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="formation.html">Formation</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="hero-eyebrow"><span class="eyebrow-dot"></span>BTS SIO SISR · Lycée Gustave Flaubert, Rouen</div>
+    <h1>Ahmed<br /><em>Mohamed</em></h1>
+    <p class="hero-desc">Étudiant en 2ème année de BTS SIO (option SISR). Passionné par les réseaux, les systèmes et la cybersécurité. Stage de 1ère année effectué — je cherche un stage pour la 2ème année.</p>
+    <div class="hero-cta">
+      <a href="projets.html" class="btn btn-primary">Voir mes projets</a>
+      <a href="stage.html" class="btn btn-purple">💼 Mes stages</a>
+      <a href="https://www.linkedin.com/in/ahmed-mohamed-997594272" target="_blank" class="btn btn-sky">💼 LinkedIn</a>
+      <a href="cv.html" class="btn btn-green">⬇ Mon CV</a>
+      <a href="contact.html" class="btn btn-outline">Me contacter</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="avatar-card">
+      <div class="avatar-ring">AM</div>
+      <h3>Ahmed Mohamed</h3>
+      <p class="sub">BTS SIO SISR · Rouen · Groupe 6</p>
+      <div class="badge-row">
+        <span class="tag blue">Linux</span>
+        <span class="tag sky">Réseau</span>
+        <span class="tag">Cisco</span>
+        <span class="tag green">RGPD</span>
+        <span class="tag purple">Docker</span>
+      </div>
+      <div class="stat-row">
+        <div class="stat-box"><div class="num">2ème</div><div class="lbl">Année BTS</div></div>
+        <div class="stat-box"><div class="num">4</div><div class="lbl">Certif. CNIL</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="home-section-title">Explorer</div>
+<p class="home-section-sub">Découvre mon parcours, mes compétences et mes projets.</p>
+
+<div class="quick-nav">
+  <a href="competences.html" class="quick-link">
+    <div class="ql-icon">🛠️</div>
+    <span>Compétences</span>
+    <small>Linux, Docker, Réseaux, Sécurité</small>
+  </a>
+  <a href="projets.html" class="quick-link">
+    <div class="ql-icon">📁</div>
+    <span>Projets</span>
+    <small>Infrastructure, serveurs, SLOOM</small>
+  </a>
+  <a href="certificats.html" class="quick-link">
+    <div class="ql-icon">📜</div>
+    <span>Certificats</span>
+    <small>CNIL RGPD — 4 modules validés</small>
+  </a>
+  <a href="stage.html" class="quick-link">
+    <div class="ql-icon">💼</div>
+    <span>Mes stages</span>
+    <small>Stage 1ère année effectué</small>
+  </a>
+  <a href="cv.html" class="quick-link">
+    <div class="ql-icon">📄</div>
+    <span>Mon CV</span>
+    <small>Expérience & stage effectué</small>
+  </a>
+  <a href="formation.html" class="quick-link">
+    <div class="ql-icon">🎓</div>
+    <span>Formation</span>
+    <small>BTS SIO, parcours académique</small>
+  </a>
+  <a href="contact.html" class="quick-link">
+    <div class="ql-icon">📬</div>
+    <span>Contact</span>
+    <small>Email, LinkedIn, formulaire</small>
+  </a>
+</div>
+
+<footer>
+  © 2026 Ahmed Mohamed · BTS SIO SISR · Lycée Gustave Flaubert, Rouen ·
+  <a href="https://www.linkedin.com/in/ahmed-mohamed-997594272" target="_blank">LinkedIn</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

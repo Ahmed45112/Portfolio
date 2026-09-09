@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificats — Ahmed Mohamed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container { max-width: 900px; margin: 0 auto; }
+    .cert-card { display: flex; flex-direction: column; gap: .5rem; }
+    .cert-top { display: flex; align-items: center; gap: .9rem; }
+    .cert-org { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-size: .72rem; font-weight: 800; color: #fff; flex-shrink: 0; }
+    .cert-top div strong { display: block; font-family: 'Space Grotesk', sans-serif; font-size: .92rem; font-weight: 600; }
+    .cert-top div span { font-size: .78rem; color: var(--muted); }
+    .cert-module { font-size: .84rem; color: var(--ink); }
+    .cert-score-row { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+    .score-pill { background: rgba(16,185,129,.1); color: var(--accent3); font-size: .78rem; font-weight: 700; padding: .22rem .7rem; border-radius: 8px; border: 1px solid rgba(16,185,129,.2); }
+    .cert-date { font-size: .75rem; color: var(--muted); }
+    .dl-btn { display: inline-flex; align-items: center; gap: .3rem; font-size: .72rem; font-weight: 600; padding: .3rem .8rem; border-radius: 8px; background: var(--accent); color: #fff; text-decoration: none; transition: all .2s ease; }
+    .dl-btn:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .cf-dl-row { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+    .score-pill + .dl-btn { margin-left: .5rem; }
+    .note-box { background: var(--surface2); border: 1px dashed var(--border); border-radius: 12px; padding: 1rem 1.2rem; font-size: .84rem; color: var(--muted); margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Ahmed<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="projets.html">Projets</a></li>
+    <li><a href="certificats.html" class="active">Certificats</a></li>
+    <li><a href="stage.html">Stage</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="formation.html">Formation</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="label">Certifications</div>
+  <h1>Certificats CNIL — RGPD</h1>
+  <p>4 modules validés auprès de la CNIL — L'Atelier RGPD.</p>
+</div>
+
+<section>
+  <div class="container">
+    <div class="note-box">
+      ℹ️ Attestations délivrées par <strong>L'Atelier RGPD de la CNIL</strong> — la formation officielle de la CNIL sur la protection des données.
+    </div>
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+      <div class="card cert-card reveal">
+        <div class="cert-top"><div class="cert-org">CNIL</div><div><strong>Module 1</strong><span>L'Atelier RGPD</span></div></div>
+        <div class="cert-module">Le RGPD et ses notions clés</div>
+        <div class="cert-score-row"><span class="score-pill">✅ 85%</span><a class="dl-btn" href="certificats/module1-rgpd-notions-cles.pdf" download>⬇ PDF</a></div>
+        <div class="cert-date">7 oct. 2025</div>
+      </div>
+      <div class="card cert-card reveal">
+        <div class="cert-top"><div class="cert-org">CNIL</div><div><strong>Module 2</strong><span>L'Atelier RGPD</span></div></div>
+        <div class="cert-module">Les principes de la protection des données</div>
+        <div class="cert-score-row"><span class="score-pill">✅ 98%</span><a class="dl-btn" href="certificats/module2-principes-protection.pdf" download>⬇ PDF</a></div>
+        <div class="cert-date">7 oct. 2025</div>
+      </div>
+      <div class="card cert-card reveal">
+        <div class="cert-top"><div class="cert-org">CNIL</div><div><strong>Module 3</strong><span>L'Atelier RGPD</span></div></div>
+        <div class="cert-module">Les responsabilités des acteurs</div>
+        <div class="cert-score-row"><span class="score-pill">✅ 92%</span><a class="dl-btn" href="certificats/module3-responsabilites-acteurs.pdf" download>⬇ PDF</a></div>
+        <div class="cert-date">7 oct. 2025</div>
+      </div>
+      <div class="card cert-card reveal">
+        <div class="cert-top"><div class="cert-org">CNIL</div><div><strong>Module 4</strong><span>L'Atelier RGPD</span></div></div>
+        <div class="cert-module">Le DPO et les outils de la conformité</div>
+        <div class="cert-score-row"><span class="score-pill">✅ 93%</span><a class="dl-btn" href="certificats/module4-dpo-conformite.pdf" download>⬇ PDF</a></div>
+        <div class="cert-date">7 oct. 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Ahmed Mohamed · BTS SIO SISR · Lycée Gustave Flaubert, Rouen ·
+  <a href="https://www.linkedin.com/in/ahmed-mohamed-997594272" target="_blank">LinkedIn</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

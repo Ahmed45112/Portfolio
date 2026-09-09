@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stage — Ahmed Mohamed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container { max-width: 950px; margin: 0 auto; }
+    .stage-card { background: var(--surface); border: 1px solid var(--border-light); border-radius: 16px; padding: 1.8rem; margin-bottom: 2rem; }
+    .stage-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; }
+    .stage-icone { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+    .stage-header h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.15rem; }
+    .stage-header .s-org { font-size: .85rem; color: var(--muted); }
+    .stage-header .s-date { font-size: .78rem; color: var(--accent); font-weight: 600; margin-top: .15rem; }
+    .stage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .stage-task { background: var(--surface2); border: 1px solid var(--border-light); border-radius: 12px; padding: 1.2rem; }
+    .stage-task .t-icon { font-size: 1.4rem; margin-bottom: .5rem; }
+    .stage-task h4 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: .92rem; margin-bottom: .3rem; }
+    .stage-task p { font-size: .83rem; color: var(--muted); }
+    .empty-stage { border: 2px dashed var(--border); border-radius: 16px; padding: 3rem; text-align: center; }
+    .empty-stage .es-icon { font-size: 2.6rem; margin-bottom: .8rem; opacity: .5; }
+    .empty-stage h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.1rem; margin-bottom: .3rem; }
+    .empty-stage p { font-size: .86rem; color: var(--muted); margin-bottom: 1.2rem; }
+    .dispo-badge { display: inline-flex; align-items: center; gap: .4rem; background: rgba(16,185,129,.1); color: var(--accent3); font-size: .78rem; font-weight: 700; padding: .35rem .9rem; border-radius: 50px; border: 1px solid rgba(16,185,129,.25); }
+    @media(max-width:700px){ .stage-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Ahmed<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="projets.html">Projets</a></li>
+    <li><a href="certificats.html">Certificats</a></li>
+    <li><a href="stage.html" class="active">Stage</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="formation.html">Formation</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="label">Expérience en entreprise</div>
+  <h1>Mes stages</h1>
+  <p>Mon expérience de stage en 1ère année, et ma recherche de stage pour la 2ème année.</p>
+</div>
+
+<section>
+  <div class="container">
+
+    <div class="stage-card reveal">
+      <div class="stage-header">
+        <div class="stage-icone" style="background:rgba(37,99,235,.1)">💼</div>
+        <div>
+          <h3>Stage 1ère année — Administration Système &amp; Cybersécurité</h3>
+          <div class="s-org">Lissam Loutfi (Auto-entrepreneur) · Rouen</div>
+          <div class="s-date">📅 Mai — Juin 2026 · Effectué ✔️</div>
+        </div>
+      </div>
+      <div class="stage-grid">
+        <div class="stage-task">
+          <div class="t-icon">🛡️</div>
+          <h4>Sécurité &amp; Filtrage</h4>
+          <p>Installation de <strong>CrowdSec</strong> pour bloquer automatiquement les IP malveillantes (VPN, nœuds Tor).</p>
+        </div>
+        <div class="stage-task">
+          <div class="t-icon">🐳</div>
+          <h4>Conteneurisation &amp; Proxy</h4>
+          <p>Gestion de conteneurs avec <strong>Docker / Docker Compose</strong> et configuration de <strong>Traefik</strong> (certificats SSL automatiques).</p>
+        </div>
+        <div class="stage-task">
+          <div class="t-icon">📧</div>
+          <h4>Sécurité messagerie</h4>
+          <p>Configuration des records DNS <strong>SPF, DKIM, DMARC</strong> pour empêcher l'usurpation d'e-mails.</p>
+        </div>
+        <div class="stage-task">
+          <div class="t-icon">📊</div>
+          <h4>Supervision &amp; Monitoring</h4>
+          <p>Mise en place de <strong>Grafana / Loki</strong> pour le suivi de la disponibilité et des journaux.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="empty-stage reveal">
+      <div class="es-icon">🔎</div>
+      <h3>Stage 2ème année — à venir</h3>
+      <p>Je suis actuellement à la recherche d'un stage de 2ème année dans les systèmes et les réseaux ou la cybersécurité.</p>
+      <a class="btn btn-primary" href="contact.html">Me proposer un stage</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Ahmed Mohamed · BTS SIO SISR · Lycée Gustave Flaubert, Rouen ·
+  <a href="https://www.linkedin.com/in/ahmed-mohamed-997594272" target="_blank">LinkedIn</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

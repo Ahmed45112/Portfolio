@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Ahmed Mohamed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container { max-width: 900px; margin: 0 auto; }
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    .contact-item { display: flex; align-items: flex-start; gap: .9rem; margin-bottom: 1.4rem; }
+    .contact-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--surface2); border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .contact-item div strong { display: block; font-size: .73rem; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: .1rem; }
+    .contact-item div a, .contact-item div span { color: var(--ink); font-size: .93rem; text-decoration: none; line-height: 1.5; }
+    .contact-item div a:hover { color: var(--accent); }
+    .form-card { background: var(--surface); border: 1px solid var(--border-light); border-radius: 16px; padding: 2rem; box-shadow: var(--shadow); }
+    .form-card h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.1rem; margin-bottom: 1.2rem; }
+    .req { color: var(--accent); }
+    .submit { width: 100%; padding: .9rem; background: var(--accent); color: #fff; border: none; border-radius: 12px; font-family: 'Space Grotesk', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: all .25s ease; margin-top: .3rem; }
+    .submit:hover { background: #1d4ed8; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37,99,235,.25); }
+    .submit:disabled { opacity: .6; cursor: default; transform: none; }
+    .form-success { display: none; margin-top: 1rem; text-align: center; padding: .9rem; background: rgba(16,185,129,.1); color: var(--accent3); border: 1px solid rgba(16,185,129,.25); border-radius: 10px; font-weight: 600; }
+    .form-error { display: none; margin-top: 1rem; text-align: center; padding: .9rem; background: rgba(239,68,68,.1); color: #ef4444; border: 1px solid rgba(239,68,68,.25); border-radius: 10px; font-weight: 600; }
+    .availability { background: linear-gradient(135deg, var(--accent), var(--accent2)); border-radius: 16px; padding: 1.8rem; color: #fff; margin-bottom: 2rem; }
+    .availability h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: .3rem; }
+    .availability p { font-size: .88rem; color: rgba(255,255,255,.85); }
+    @media(max-width:900px){
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Ahmed<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="projets.html">Projets</a></li>
+    <li><a href="certificats.html">Certificats</a></li>
+    <li><a href="stage.html">Stage</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="formation.html">Formation</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="label">Disponible</div>
+  <h1>Me contacter</h1>
+  <p>Contacte-moi pour toute question ou proposition de stage.</p>
+</div>
+
+<section>
+  <div class="container">
+    <div class="availability reveal">
+      <h3>🎯 Recherche de stage — 2ème année</h3>
+      <p>Stage 1ère année effectué. J'accepte les propositions de stage pour ma 2ème année de BTS SIO.</p>
+    </div>
+
+    <div class="contact-layout">
+      <div class="reveal">
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div><strong>Email</strong><a href="mailto:ahmedmohamed4.pro@gmail.com">ahmedmohamed4.pro@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div><strong>Téléphone</strong><span>07 84 70 09 86</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div><strong>Adresse</strong><span>1 Rue Brisout De Barneville, 76100 Rouen</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/ahmed-mohamed-997594272" target="_blank">ahmed-mohamed-997594272</a></div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <h3>Envoyer un message</h3>
+        <form id="cf" action="https://formspree.io/f/mzebyrye" method="POST">
+          <div class="form-row">
+            <div class="form-group"><label>Nom <span class="req">*</span></label><input type="text" name="nom" placeholder="Dupont" required /></div>
+            <div class="form-group"><label>Prénom <span class="req">*</span></label><input type="text" name="prenom" placeholder="Marie" required /></div>
+          </div>
+          <div class="form-group"><label>Email <span class="req">*</span></label><input type="email" name="email" placeholder="marie@exemple.fr" required /></div>
+          <div class="form-group"><label>Message</label><textarea name="message" placeholder="Votre message, proposition de stage…"></textarea></div>
+          <input type="hidden" name="_subject" value="📬 Nouveau message — Portfolio Ahmed Mohamed" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <button type="submit" class="submit" id="cf-btn">ENVOYER LE MESSAGE</button>
+        </form>
+        <div class="form-success" id="cf-success">✅ Message envoyé ! Je vous répondrai rapidement.</div>
+        <div class="form-error" id="cf-error">❌ Erreur. Réessaie ou écris-moi directement par email.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Ahmed Mohamed · BTS SIO SISR · Lycée Gustave Flaubert, Rouen ·
+  <a href="https://www.linkedin.com/in/ahmed-mohamed-997594272" target="_blank">LinkedIn</a>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 70);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: .1 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  document.getElementById('cf').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const btn = document.getElementById('cf-btn');
+    const ok = document.getElementById('cf-success');
+    const err = document.getElementById('cf-error');
+    ok.style.display = 'none';
+    err.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours…';
+    try {
+      const res = await fetch('https://formspree.io/f/mzebyrye', {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) { ok.style.display = 'block'; this.reset(); }
+      else { err.style.display = 'block'; }
+    } catch (ex) { err.style.display = 'block'; }
+    btn.disabled = false;
+    btn.textContent = 'ENVOYER LE MESSAGE';
+  });
+</script>
+</body>
+</html>

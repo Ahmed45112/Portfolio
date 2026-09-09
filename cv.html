@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Ahmed Mohamed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container { max-width: 1000px; margin: 0 auto; }
+    .cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem; margin-bottom: 1.3rem; }
+    .cv-box { background: var(--surface); border: 1px solid var(--border-light); border-radius: 16px; padding: 1.8rem; }
+    .cv-box h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.05rem; margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 2px solid var(--border-light); }
+    .info-row { display: flex; align-items: flex-start; gap: .75rem; margin-bottom: .8rem; }
+    .info-icon { width: 32px; height: 32px; border-radius: 9px; background: var(--surface2); border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center; font-size: .9rem; flex-shrink: 0; }
+    .info-row div { font-size: .88rem; line-height: 1.5; }
+    .info-row div strong { display: block; font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-bottom: .1rem; }
+    .info-row div a { color: var(--accent); text-decoration: none; }
+    .info-row div a:hover { text-decoration: underline; }
+    .cv-dl-card { background: linear-gradient(135deg, var(--accent), var(--accent2)); border-radius: 16px; padding: 2.5rem; color: #fff; display: flex; align-items: center; gap: 2rem; }
+    .cv-dl-icon { font-size: 4rem; flex-shrink: 0; }
+    .cv-dl-text h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.3rem; margin-bottom: .4rem; }
+    .cv-dl-text p { font-size: .88rem; color: rgba(255,255,255,.8); margin-bottom: 1.2rem; }
+    .cv-dl-btn { display: inline-flex; align-items: center; gap: .5rem; background: #fff; color: var(--accent); padding: .78rem 1.8rem; border-radius: 12px; font-weight: 700; font-size: .9rem; text-decoration: none; transition: all .25s ease; }
+    .cv-dl-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.15); }
+    @media(max-width:900px){
+      .cv-grid { grid-template-columns: 1fr; }
+      .cv-dl-card { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Ahmed<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="projets.html">Projets</a></li>
+    <li><a href="certificats.html">Certificats</a></li>
+    <li><a href="stage.html">Stage</a></li>
+    <li><a href="cv.html" class="active">CV</a></li>
+    <li><a href="formation.html">Formation</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="label">Curriculum Vitae</div>
+  <h1>Mon CV</h1>
+  <p>Voir mon CV en ligne ou le télécharger au format PDF.</p>
+</div>
+
+<section>
+  <div class="container">
+    <div class="cv-grid">
+      <div class="cv-box reveal">
+        <h3>Coordonnées</h3>
+        <div class="info-row"><div class="info-icon">✉️</div><div><strong>Email</strong><a href="mailto:ahmedmohamed4.pro@gmail.com">ahmedmohamed4.pro@gmail.com</a></div></div>
+        <div class="info-row"><div class="info-icon">📞</div><div><strong>Téléphone</strong><span>07 84 70 09 86</span></div></div>
+        <div class="info-row"><div class="info-icon">📍</div><div><strong>Adresse</strong><span>1 Rue Brisout De Barneville, 76100 Rouen</span></div></div>
+        <div class="info-row"><div class="info-icon">💼</div><div><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/ahmed-mohamed-997594272" target="_blank">Voir mon profil</a></div></div>
+        <div class="info-row"><div class="info-icon">📅</div><div><strong>Stage</strong><span>1ère année effectué — Je cherche un stage pour la 2ème année</span></div></div>
+      </div>
+      <div class="cv-box reveal">
+        <h3>Compétences clés</h3>
+        <div class="tag-row" style="margin-top:0">
+          <span class="tag blue">Linux (Debian)</span>
+          <span class="tag purple">Docker</span>
+          <span class="tag green">Python / Bash</span>
+          <span class="tag sky">Réseaux</span>
+          <span class="tag purple">CrowdSec</span>
+          <span class="tag sky">Traefik</span>
+          <span class="tag blue">Grafana / Loki</span>
+          <span class="tag green">SPF / DKIM / DMARC</span>
+          <span class="tag">VirtualBox</span>
+          <span class="tag">Cisco</span>
+          <span class="tag">DHCP / DNS</span>
+        </div>
+        <h3 style="margin-top:1.5rem">Centres d'intérêt</h3>
+        <div class="info-row"><div class="info-icon">📚</div><div><strong>Lecture</strong>Webtoon</div></div>
+        <div class="info-row"><div class="info-icon">🏋️</div><div><strong>Sport</strong>Musculation</div></div>
+        <div class="info-row"><div class="info-icon">🎧</div><div><strong>Musique</strong>Kpop</div></div>
+      </div>
+    </div>
+
+    <div class="cv-dl-card reveal">
+      <div class="cv-dl-icon">📄</div>
+      <div class="cv-dl-text">
+        <h3>CV — Ahmed Mohamed</h3>
+        <p>Étudiant BTS SIO SISR · Lycée Gustave Flaubert, Rouen · Stage 1ère année effectué</p>
+        <a class="cv-dl-btn" href="cv-a4.html" target="_blank">🖨️ Voir le CV imprimable (A4)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Ahmed Mohamed · BTS SIO SISR · Lycée Gustave Flaubert, Rouen ·
+  <a href="https://www.linkedin.com/in/ahmed-mohamed-997594272" target="_blank">LinkedIn</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
