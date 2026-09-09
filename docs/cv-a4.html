@@ -21,12 +21,11 @@
     /* ===== Feuille A4 ===== */
     .sheet {
       width: 210mm;
-      height: 297mm;
+      min-height: 297mm;
       margin: 8mm auto;
       background: #fff;
       display: grid;
       grid-template-columns: 64mm 1fr;
-      overflow: hidden;
       box-shadow: 0 4px 24px rgba(0,0,0,.12);
     }
 
@@ -80,10 +79,10 @@
     }
     @media(max-width: 800px){
       body { background: #fff; }
-      .sheet { width: 100%; min-height: auto; max-height: none; grid-template-columns: 1fr; margin: 0; }
-      .side { padding: 8mm; }
-      .side .name-sm { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 15pt; font-weight: 700; margin-bottom: 1mm; }
-      .main { padding: 8mm; }
+      .sheet { width: 100%; margin: 0; }
+      .side { padding: 6mm 4mm; }
+      .side .name-sm { display: none; }
+      .main { padding: 6mm 5mm; }
     }
   </style>
 </head>
