@@ -62,6 +62,10 @@
     .prof { background: var(--am-bg-soft); border-radius: 4mm; padding: 2.6mm 3.2mm; font-size: 8.4pt; color: var(--am-muted); border-left: 3px solid var(--am-accent); margin-bottom: 1mm; }
     .prof strong { color: var(--am-ink); }
 
+    .techstrip { display: flex; flex-wrap: wrap; gap: 1.3mm; margin-bottom: 1mm; }
+    .chip { display: inline-flex; align-items: center; gap: 1.2mm; background: var(--am-bg-soft); border: 1px solid var(--am-line); border-radius: 99px; padding: .7mm 2mm; font-size: 7.1pt; font-weight: 600; color: var(--am-ink); }
+    .chip .ce { font-size: 7.4pt; }
+
     .job, .proj { margin-bottom: 3mm; position: relative; padding-left: 3.4mm; }
     .job::before, .proj::before { content: ''; position: absolute; left: 0; top: 1.2mm; width: 1.6mm; height: 1.6mm; border-radius: 50%; background: var(--am-accent); }
     .job .j-title, .proj .p-title { font-weight: 700; font-size: 9pt; color: var(--am-ink); }
@@ -145,8 +149,10 @@
     <ul>
       <li>Français — courant</li>
       <li>Anglais — niveau scolaire</li>
-      <li>Autonomie, rigueur</li>
-      <li>Esprit d'équipe</li>
+      <li>Adaptation &amp; flexibilité</li>
+      <li>Autonomie &amp; initiative</li>
+      <li>Travail en équipe</li>
+      <li>Organisation &amp; gestion du temps</li>
     </ul>
 
     <h2>Centre d'intérêt</h2>
@@ -159,7 +165,19 @@
   <main class="main">
 
     <div class="prof">
-      Étudiant en 2ème année de BTS SIO (option SISR), Lycée Gustave Flaubert (Rouen). Stage 1ère année effectué en <strong>administration système &amp; cybersécurité</strong>. Je recherche un <strong>stage de 2ème année</strong> en systèmes, réseaux ou sécurité.
+      Étudiant en 2ème année de BTS SIO (option SISR), Lycée Gustave Flaubert (Rouen). Stage 1ère année effectué en <strong>administration système &amp; cybersécurité</strong>. Je recherche un <strong>stage de 2ème année</strong> en systèmes, réseaux ou sécurité — disponible <strong>du 25 mai au 26 juin 2026</strong>.
+    </div>
+
+    <div class="techstrip">
+      <span class="chip"><span class="ce">🐧</span> Linux / Debian</span>
+      <span class="chip"><span class="ce">🐳</span> Docker</span>
+      <span class="chip"><span class="ce">🌐</span> Cisco</span>
+      <span class="chip"><span class="ce">💻</span> VirtualBox</span>
+      <span class="chip"><span class="ce">🖥️</span> Windows</span>
+      <span class="chip"><span class="ce">🐍</span> Python</span>
+      <span class="chip"><span class="ce">📡</span> Wireshark</span>
+      <span class="chip"><span class="ce">🛡️</span> CrowdSec</span>
+      <span class="chip"><span class="ce">🚀</span> Traefik</span>
     </div>
 
     <h2><span class="ico">💼</span> Expérience Professionnelle</h2>
@@ -180,14 +198,18 @@
       <span class="p-date">Nov. 2025</span>
       <div class="p-title">Déploiement d'infrastructure réseau</div>
       <ul>
-        <li>Schéma réseau pour un espace de coworking — Cisco, Pare-feu, plan d'adressage IP, dossier technique.</li>
+        <li>Schéma réseau pour un espace de coworking (Cisco Packet Tracer).</li>
+        <li>Choix et configuration des équipements (switch, routeur, pare-feu).</li>
+        <li>Plan d'adressage IP et dossier technique (matériel, coûts, maintenance).</li>
       </ul>
     </div>
     <div class="proj">
       <span class="p-date">Fév. – Mars 2026</span>
       <div class="p-title">Administration serveur Linux</div>
       <ul>
-        <li>Serveurs Debian (DHCP, DNS, ProFTPD), sauvegarde automatisée, VirtualBox.</li>
+        <li>Installation et configuration d'un serveur Linux (Debian).</li>
+        <li>Services DHCP, DNS et ProFTPD ; sauvegarde automatisée.</li>
+        <li>Poste client Windows en IP dynamique (machine virtuelle).</li>
       </ul>
     </div>
     <div class="proj">
