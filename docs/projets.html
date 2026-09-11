@@ -1,123 +1,64 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projets — Ahmed Mohamed</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .container { max-width: 1100px; margin: 0 auto; }
-    .project-card { display: flex; flex-direction: column; }
-    .project-top { height: 110px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.6rem; margin-bottom: 1rem; }
-    .mission-badge { display: inline-flex; align-items: center; gap: .35rem; background: rgba(139,92,246,.08); color: var(--accent4); font-size: .72rem; font-weight: 700; padding: .22rem .7rem; border-radius: 8px; margin-bottom: .7rem; border: 1px solid rgba(139,92,246,.2); }
-    .project-date { font-size: .75rem; color: var(--accent); font-weight: 600; margin-top: .8rem; }
-    .project-list { font-size: .84rem; color: var(--muted); padding-left: 1.1rem; margin-top: .4rem; line-height: 1.8; }
-    .project-list li strong { color: var(--ink); }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projets — Ahmed Mohamed</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="nav-logo">Ahmed<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="competences.html">Compétences</a></li>
-    <li><a href="projets.html" class="active">Projets</a></li>
-    <li><a href="certificats.html">Certificats</a></li>
-    <li><a href="stage.html">Stage</a></li>
-    <li><a href="cv.html">CV</a></li>
-    <li><a href="formation.html">Formation</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+<nav class="wrap">
+  <a href="index.html" class="name">Ahmed <b>Mohamed</b></a>
+  <div class="links">
+    <a href="index.html">Accueil</a>
+    <a href="competences.html">Compétences</a>
+    <a href="projets.html" class="active">Projets</a>
+    <a href="certificats.html">Certificats</a>
+    <a href="cv.html">CV</a>
+    <a href="formation.html">Formation</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-<div class="page-header">
-  <div class="label">Réalisations</div>
-  <h1>Projets académiques</h1>
-  <p>Projets réalisés dans le cadre du BTS SIO au Lycée Gustave Flaubert — partie SISR.</p>
+<header class="phead">
+  <div class="wrap">
+    <h1>Projets</h1>
+    <p>Les principaux travaux réalisés pendant mon BTS SIO.</p>
+  </div>
+</header>
+
+<div class="wrap page">
+
+  <div class="proj">
+    <div class="pt"><h3>Déploiement d'infrastructure réseau</h3><span class="date">Nov. 2025</span></div>
+    <p>Schéma réseau d'un espace de coworking, choix et configuration des équipements (switch, routeur, pare-feu),
+    plan d'adressage IP et dossier technique (matériel, coûts, maintenance).</p>
+  </div>
+
+  <div class="proj">
+    <div class="pt"><h3>Administration serveur Linux</h3><span class="date">Fév. – Mars 2026</span></div>
+    <p>Installation et configuration d'un serveur Debian, mise en place des services DHCP, DNS et ProFTPD,
+    sauvegarde automatisée, poste client Windows en IP dynamique (machine virtuelle).</p>
+  </div>
+
+  <div class="proj">
+    <div class="pt"><h3>Mission SLOOM</h3><span class="date">Mars – Mai 2026</span></div>
+    <p>Serveur de base de données Linux + sauvegarde automatisée, DHCP Windows 11, sécurisation
+    (pare-feu, DNS + DNSSEC) et wiki interne. <em>(entreprise fictive)</em></p>
+  </div>
+
+  <div class="proj">
+    <div class="pt"><h3>Stage 1ère année — Administration système &amp; cybersécurité</h3><span class="date">Mai – Juin 2026</span></div>
+    <p>Sécurisation avec CrowdSec, déploiement Docker et reverse proxy Traefik avec certificats SSL,
+    records DNS SPF/DKIM/DMARC, supervision Grafana / Loki. <span class="detail">(Lissam Loutfi, auto-entrepreneur)</span></p>
+  </div>
+
 </div>
 
-<section>
-  <div class="container card-grid">
-    <div class="card reveal">
-      <div class="project-top" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe)">🌐</div>
-      <div class="tag-row">
-        <span class="tag blue">Cisco Packet Tracer</span>
-        <span class="tag blue">Adressage IP</span>
-        <span class="tag blue">Dossier technique</span>
-      </div>
-      <h3>Déploiement d'infrastructure réseau</h3>
-      <ul class="project-list">
-        <li>Conception d'un schéma réseau pour un espace de coworking</li>
-        <li>Choix et configuration des équipements (switch, routeur, pare-feu)</li>
-        <li>Mise en place de l'adressage IP</li>
-        <li>Rédaction d'un dossier technique complet</li>
-      </ul>
-      <div class="project-date">📅 Novembre 2025</div>
-    </div>
-
-    <div class="card reveal">
-      <div class="project-top" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0)">🖥️</div>
-      <div class="tag-row">
-        <span class="tag green">Linux</span>
-        <span class="tag green">DHCP</span>
-        <span class="tag green">BDD</span>
-        <span class="tag green">VirtualBox</span>
-      </div>
-      <h3>Administration serveur Linux</h3>
-      <ul class="project-list">
-        <li>Installation et configuration d'un serveur Linux</li>
-        <li>Déploiement d'un serveur de base de données et DHCP</li>
-        <li>Configuration d'un poste client Windows en IP dynamique (VM)</li>
-        <li>Solution de sauvegarde automatisée</li>
-      </ul>
-      <div class="project-date">📅 Février — Mars 2026</div>
-    </div>
-
-    <div class="card reveal">
-      <div class="project-top" style="background:linear-gradient(135deg,#ffedd5,#fed7aa)">🏢</div>
-      <div class="mission-badge">🎯 Mission SLOOM — Partie 1 (entreprise fictive)</div>
-      <div class="tag-row">
-        <span class="tag">Linux</span>
-        <span class="tag">SGBDR</span>
-        <span class="tag">DHCP</span>
-        <span class="tag">Sauvegarde</span>
-      </div>
-      <h3>Serveur BDD &amp; DHCP — SLOOM</h3>
-      <ul class="project-list">
-        <li>Serveur BDD Linux sans interface graphique (groupe 6)</li>
-        <li>Comparaison et mise en place d'une solution de sauvegarde automatisée</li>
-        <li>Serveur DHCP avec poste Windows 11 en VM (IP dynamique)</li>
-      </ul>
-      <div class="project-date">📅 Rendu : 10 mars 2026</div>
-    </div>
-
-    <div class="card reveal">
-      <div class="project-top" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe)">🔐</div>
-      <div class="mission-badge">🎯 Mission SLOOM — Partie 2 (entreprise fictive)</div>
-      <div class="tag-row">
-        <span class="tag purple">Pare-feu</span>
-        <span class="tag purple">DNS</span>
-        <span class="tag purple">DNSSEC</span>
-        <span class="tag purple">Wiki</span>
-      </div>
-      <h3>Sécurisation du réseau SLOOM</h3>
-      <ul class="project-list">
-        <li>Plan de sécurisation réseau (pare-feu, protocoles, ports)</li>
-        <li>Installation et configuration d'un pare-feu professionnel</li>
-        <li>Serveur DNS sécurisé avec DNSSEC</li>
-        <li>Wiki interne collaboratif (intranet)</li>
-      </ul>
-      <div class="project-date">📅 Rendu : 15 mai 2026</div>
-    </div>
-  </div>
-</section>
-
 <footer>
-  © 2026 Ahmed Mohamed · BTS SIO SISR · Lycée Gustave Flaubert, Rouen ·
-  <a href="https://www.linkedin.com/in/ahmed-mohamed-997594272" target="_blank">LinkedIn</a>
+  © 2026 Ahmed Mohamed · BTS SIO SISR · <a href="https://www.linkedin.com/in/ahmed-mohamed-997594272">LinkedIn</a>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>

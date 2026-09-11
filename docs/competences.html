@@ -1,137 +1,77 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compétences — Ahmed Mohamed</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .container { max-width: 1100px; margin: 0 auto; }
-    .skills-cat { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 600; margin: 2.5rem 0 1.2rem; color: var(--ink); }
-    .skills-cat .label { font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: .3rem; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Compétences — Ahmed Mohamed</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="nav-logo">Ahmed<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="competences.html" class="active">Compétences</a></li>
-    <li><a href="projets.html">Projets</a></li>
-    <li><a href="certificats.html">Certificats</a></li>
-    <li><a href="stage.html">Stage</a></li>
-    <li><a href="cv.html">CV</a></li>
-    <li><a href="formation.html">Formation</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+<nav class="wrap">
+  <a href="index.html" class="name">Ahmed <b>Mohamed</b></a>
+  <div class="links">
+    <a href="index.html">Accueil</a>
+    <a href="competences.html" class="active">Compétences</a>
+    <a href="projets.html">Projets</a>
+    <a href="certificats.html">Certificats</a>
+    <a href="cv.html">CV</a>
+    <a href="formation.html">Formation</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-<div class="page-header">
-  <div class="label">Savoir-faire</div>
-  <h1>Compétences techniques</h1>
-  <p>Compétences développées en BTS SIO SISR et pendant mon stage en administration système &amp; cybersécurité.</p>
-</div>
+<header class="phead">
+  <div class="wrap">
+    <h1>Compétences</h1>
+    <p>Les outils et technologies que j'utilise en formation et en stage.</p>
+  </div>
+</header>
 
-<section>
-  <div class="container">
-    <div class="skills-cat"><span class="label">Systèmes &amp; Serveurs</span>Administration</div>
-    <div class="card-grid">
-      <div class="card reveal">
-        <div class="card-icon" style="background:rgba(16,185,129,.1)">🐧</div>
-        <h3>Linux (Debian)</h3>
-        <p>Installation et configuration de systèmes Debian en cours et en stage : services réseau, shell, gestion de fichiers.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="background:rgba(139,92,246,.1)">🐳</div>
-        <h3>Docker / Docker Compose</h3>
-        <p>Découverte en stage : lancement et gestion de conteneurs, base de Docker Compose pour des services simples.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="background:rgba(37,99,235,.1)">💻</div>
-        <h3>Virtualisation</h3>
-        <p>VirtualBox — création et gestion de machines virtuelles Windows et Linux en environnement scolaire.</p>
-      </div>
+<div class="wrap page">
+
+  <div class="skills">
+    <div class="skill">
+      <svg viewBox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="2"/><rect x="10" y="10" width="4" height="4" fill="currentColor" stroke="none"/><path d="M9 2.5v4M15 2.5v4M9 17.5v4M15 17.5v4M2.5 9h4M2.5 15h4M17.5 9h4M17.5 15h4"/></svg>
+      <h3>Systèmes &amp; serveurs</h3>
+      <ul><li>Linux (Debian), administration</li><li>Virtualisation (VirtualBox)</li><li>Docker, Docker Compose</li><li>Traefik, SSL (Let's Encrypt)</li><li>Scripts Bash / Python</li></ul>
     </div>
-
-    <div class="skills-cat"><span class="label">Réseaux</span>Infrastructure</div>
-    <div class="card-grid">
-      <div class="card reveal">
-        <div class="card-icon" style="background:rgba(14,165,233,.1)">🌐</div>
-        <h3>Architecture réseau</h3>
-        <p>Conception de schémas réseau en projet : topologies, plan d'adressage IP, choix des équipements.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="background:rgba(14,165,233,.1)">📡</div>
-        <h3>Services réseau</h3>
-        <p>Mise en place de services DHCP, DNS et ProFTPD sur Linux en TP et projets.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="background:rgba(37,99,235,.1)">🔀</div>
-        <h3>Protocoles &amp; commutation</h3>
-        <p>Bases de TCP/IP, HTTP, FTP, SSH. Simulation Cisco Packet Tracer et manipulation d'un switch en TP.</p>
-      </div>
+    <div class="skill">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+      <h3>Réseaux</h3>
+      <ul><li>TCP/IP, HTTP, FTP, SSH</li><li>DHCP, DNS, ProFTPD</li><li>Cisco Packet Tracer, switch</li><li>Routage, adressage IP</li></ul>
     </div>
-
-    <div class="skills-cat"><span class="label">Sécurité</span>Cybersécurité</div>
-    <div class="card-grid">
-      <div class="card reveal">
-        <div class="card-icon" style="background:rgba(139,92,246,.1)">🛡️</div>
-        <h3>CrowdSec</h3>
-        <p>Mise en place en stage de la solution de blocage des IP malveillantes (VPN et nœuds Tor).</p>
-        <div class="tag-row"><span class="tag purple">Blocage IP</span><span class="tag purple">Déploiement</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="background:rgba(16,185,129,.1)">📧</div>
-        <h3>Sécurité messagerie</h3>
-        <p>Configuration en stage des records DNS SPF, DKIM et DMARC contre l'usurpation d'e-mail.</p>
-        <div class="tag-row"><span class="tag green">SPF</span><span class="tag green">DKIM</span><span class="tag green">DMARC</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="background:rgba(14,165,233,.1)">🔐</div>
-        <h3>SSL &amp; Reverse Proxy</h3>
-        <p>Configuration en stage de Traefik avec certificats SSL automatiques (Let's Encrypt).</p>
-        <div class="tag-row"><span class="tag sky">Traefik</span><span class="tag sky">SSL</span></div>
-      </div>
+    <div class="skill">
+      <svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v6c0 4.7-3.2 7.8-7.5 9-4.3-1.2-7.5-4.3-7.5-9V6z"/></svg>
+      <h3>Sécurité</h3>
+      <ul><li>CrowdSec (blocage d'IP)</li><li>Pare-feu, durcissement</li><li>SPF, DKIM, DMARC</li><li>DNSSEC</li></ul>
     </div>
-
-    <div class="skills-cat"><span class="label">Monitoring</span>Supervision</div>
-    <div class="card-grid">
-      <div class="card reveal">
-        <div class="card-icon" style="background:rgba(37,99,235,.1)">📊</div>
-        <h3>Grafana / Loki</h3>
-        <p>Consultation et suivi des tableaux de bord mis en place en stage (disponibilité, journaux).</p>
-        <div class="tag-row"><span class="tag blue">Grafana</span><span class="tag blue">Loki</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="background:rgba(16,185,129,.1)">🔍</div>
-        <h3>Python &amp; Scripting</h3>
-        <p>Notions de scripting Python et Bash, utilisées pour de petites tâches d'automatisation.</p>
-        <div class="tag-row"><span class="tag green">Python</span><span class="tag green">Bash</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon" style="background:rgba(14,165,233,.1)">🧰</div>
-        <h3>Outils réseau</h3>
-        <p>Cisco Packet Tracer pour la simulation, Wireshark pour l'analyse de trames.</p>
-        <div class="tag-row"><span class="tag sky">Packet Tracer</span><span class="tag sky">Wireshark</span></div>
-      </div>
-    </div>
-
-    <div class="skills-cat"><span class="label">Savoir-être</span>Soft Skills</div>
-    <div class="card-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
-      <div class="card reveal"><div class="card-icon" style="background:rgba(37,99,235,.1)">🔄</div><h3>Adaptation</h3><p>Capacité à m'adapter aux environnements et technologies variés.</p></div>
-      <div class="card reveal"><div class="card-icon" style="background:rgba(16,185,129,.1)">🚀</div><h3>Autonomie</h3><p>Autonomie et esprit d'initiative dans la résolution de problèmes.</p></div>
-      <div class="card reveal"><div class="card-icon" style="background:rgba(139,92,246,.1)">🤝</div><h3>Travail en équipe</h3><p>Collaboration efficace et communication claire au sein d'un groupe.</p></div>
-      <div class="card reveal"><div class="card-icon" style="background:rgba(14,165,233,.1)">📋</div><h3>Rigueur</h3><p>Organisation, gestion du temps et attention aux détails.</p></div>
+    <div class="skill">
+      <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="2.8"/><path d="M4 5.5v12c0 1.6 3.6 2.8 8 2.8s8-1.2 8-2.8v-12"/><path d="M4 11.5c0 1.6 3.6 2.8 8 2.8s8-1.2 8-2.8"/></svg>
+      <h3>Supervision &amp; données</h3>
+      <ul><li>Grafana, Loki</li><li>Wireshark</li><li>Serveur de base de données</li><li>Sauvegarde automatisée</li></ul>
     </div>
   </div>
-</section>
+
+  <h2 style="margin-top:44px">Soft skills</h2>
+  <div class="pline"></div>
+
+  <ul class="rows">
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 4l2.1 4.2 4.6.7-3.3 3.2.8 4.6L12 14.7 7.8 16.7l.8-4.6-3.3-3.2 4.6-.7z"/></svg></div>
+      <div><b>Adaptation &amp; flexibilité</b><span class="detail">Je m'adapte vite aux nouveaux outils et environnements.</span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg></div>
+      <div><b>Autonomie &amp; initiative</b><span class="detail">Je travaille seul sur des projets techniques, en cherchant par moi-même.</span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 12a4 4 0 0 1 8 0M17 21v-2a5 5 0 0 0-10 0v2"/><circle cx="12" cy="7" r="3"/></svg></div>
+      <div><b>Travail en équipe</b><span class="detail">Je collabore sur des projets de groupe, en partageant les tâches.</span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+      <div><b>Organisation &amp; gestion du temps</b><span class="detail">Je respecte les délais et je priorise mes tâches.</span></div></li>
+  </ul>
+
+</div>
 
 <footer>
-  © 2026 Ahmed Mohamed · BTS SIO SISR · Lycée Gustave Flaubert, Rouen ·
-  <a href="https://www.linkedin.com/in/ahmed-mohamed-997594272" target="_blank">LinkedIn</a>
+  © 2026 Ahmed Mohamed · BTS SIO SISR · <a href="https://www.linkedin.com/in/ahmed-mohamed-997594272">LinkedIn</a>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
