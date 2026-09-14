@@ -24,7 +24,7 @@
 <header class="phead">
   <div class="wrap">
     <h1>Contact</h1>
-    <p>Une question, une proposition de stage ? Contactez-moi par email ou via le formulaire.</p>
+    <p>Une question, une proposition de stage ? Contactez-moi directement par email.</p>
   </div>
 </header>
 
@@ -53,19 +53,10 @@
     </div>
 
     <div>
-      <h2>Ou par le formulaire</h2>
+      <h2>Installation du contact direct</h2>
       <div class="pline"></div>
-
-      <div class="formbox">
-        <form class="form" id="cf">
-          <div class="grp"><label>Nom *</label><input type="text" name="nom" required /></div>
-          <div class="grp"><label>Adresse email *</label><input type="email" name="email" required /></div>
-          <div class="grp"><label>Message</label><textarea name="message"></textarea></div>
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-          <button type="submit" class="btn btn-solid" style="border:none">Envoyer</button>
-          <div class="note" id="nform"></div>
-        </form>
-      </div>
+      <p style="margin:0 0 18px;color:var(--muted)">Un simple clic sur mon adresse ouvre votre messagerie : aucun formulaire, une réponse directe.</p>
+      <a class="btn btn-solid" href="mailto:ahmedmohamed4.pro@gmail.com">✉ ahmedmohamed4.pro@gmail.com</a>
     </div>
 
   </div>
@@ -74,28 +65,6 @@
 <footer>
   © 2026 Ahmed Mohamed · BTS SIO SISR · <a href="https://www.linkedin.com/in/ahmed-mohamed-997594272">LinkedIn</a>
 </footer>
-
-<script>
-  document.getElementById('cf').addEventListener('submit', async function (e) {
-    e.preventDefault();
-    const n = document.getElementById('nform');
-    n.className = 'note';
-    n.style.display = 'none';
-    try {
-      const res = await fetch('https://formspree.io/f/mzebyrye', {
-        method: 'POST',
-        body: new FormData(this),
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) { n.textContent = '✅ Message envoyé ! Je vous répondrai rapidement.'; n.className = 'note ok'; this.reset(); }
-      else { n.textContent = '❌ Erreur. Écrivez-moi directement : ahmedmohamed4.pro@gmail.com'; n.className = 'note err'; }
-    } catch (ex) {
-      n.textContent = 'En local, l\'envoi est bloqué (normal). Une fois en ligne, ce formulaire fonctionne. Email direct : ahmedmohamed4.pro@gmail.com';
-      n.className = 'note err';
-    }
-    n.style.display = 'block';
-  });
-</script>
 
 </body>
 </html>
