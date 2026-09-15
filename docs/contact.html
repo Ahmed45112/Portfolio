@@ -4,7 +4,42 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Contact — Ahmed Mohamed</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
+<style>
+  .c-wrap { max-width: 900px; margin: 0 auto; }
+  .c-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+  .c-item { display: flex; align-items: flex-start; gap: .9rem; margin-bottom: 1.4rem; }
+  .c-icon { width: 44px; height: 44px; border-radius: 12px; background: #eef4fe; border: 1px solid #dbe7fb; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+  .c-item div strong { display: block; font-size: .73rem; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: #5c6b85; margin-bottom: .1rem; }
+  .c-item div a, .c-item div span { color: #13233f; font-size: .93rem; text-decoration: none; line-height: 1.5; }
+  .c-item div a:hover { color: #1d4ed8; }
+  .form-card { background: #fff; border: 1px solid #e4ebf5; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 30px rgba(19,35,63,.08); }
+  .form-card h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.1rem; margin: 0 0 1.2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label { display: block; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: #5c6b85; margin-bottom: .3rem; }
+  .req { color: #1d4ed8; }
+  .form-group input, .form-group textarea { width: 100%; padding: .7rem .2rem; border: none; border-bottom: 2px solid #e4ebf5; background: transparent; font-family: 'Inter', sans-serif; font-size: .95rem; color: #13233f; outline: none; transition: border-color .2s; }
+  .form-group input:focus, .form-group textarea:focus { border-bottom-color: #1d4ed8; }
+  .form-group textarea { min-height: 90px; resize: vertical; }
+  .submit { width: 100%; padding: .9rem; background: #1d4ed8; color: #fff; border: none; border-radius: 12px; font-family: 'Space Grotesk', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; transition: all .25s ease; margin-top: .3rem; }
+  .submit:hover { background: #16337a; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(29,78,216,.25); }
+  .submit:disabled { opacity: .6; cursor: default; transform: none; }
+  .form-success { display: none; margin-top: 1rem; text-align: center; padding: .9rem; background: rgba(16,185,129,.1); color: #0f7a4d; border: 1px solid rgba(16,185,129,.25); border-radius: 10px; font-weight: 600; }
+  .form-error { display: none; margin-top: 1rem; text-align: center; padding: .9rem; background: rgba(239,68,68,.1); color: #b3261e; border: 1px solid rgba(239,68,68,.25); border-radius: 10px; font-weight: 600; }
+  .availability { background: linear-gradient(135deg, #1d4ed8, #3b82f6); border-radius: 16px; padding: 1.8rem; color: #fff; margin-bottom: 2rem; }
+  .availability h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; margin: 0 0 .3rem; }
+  .availability p { font-size: .88rem; color: rgba(255,255,255,.9); margin: 0; }
+  .cs-head { text-align: center; margin-bottom: 2rem; }
+  .cs-label { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .1em; color: #1d4ed8; border: 1px solid #1d4ed8; border-radius: 999px; padding: .3rem .9rem; margin-bottom: 1rem; }
+  .cs-head h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 600; font-size: 34px; margin: 0 0 .4rem; }
+  .cs-head p { margin: 0; color: #5c6b85; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+  @media(max-width:900px){ .c-layout { grid-template-columns: 1fr; } }
+  @media(max-width:560px){ .form-row { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
 
@@ -21,58 +56,61 @@
   </div>
 </nav>
 
-<header class="phead">
-  <div class="wrap">
-    <h1>Contact</h1>
-    <p>Une question, une proposition de stage ? Contactez-moi par email ou via le formulaire.</p>
+<div class="wrap">
+
+  <div class="cs-head" style="padding-top:52px">
+    <span class="cs-label">Disponible</span>
+    <h1>Me contacter</h1>
+    <p>Contacte-moi pour toute question ou proposition de stage.</p>
   </div>
-</header>
 
-<div class="wrap page">
-  <div class="cols">
+  <section>
+    <div class="c-wrap">
+      <div class="availability reveal">
+        <h3>🎯 Recherche de stage — 2ème année</h3>
+        <p>Stage 1ère année effectué. J'accepte les propositions de stage pour ma 2ème année de BTS SIO (disponible à partir de janvier).</p>
+      </div>
 
-    <div>
-      <h2>Par email</h2>
-      <div class="pline"></div>
-      <p style="margin:0 0 18px;color:var(--muted)">La méthode la plus simple : écrivez-moi directement à cette adresse.</p>
-      <a class="btn btn-solid" href="mailto:ahmedmohamed4.pro@gmail.com">✉ ahmedmohamed4.pro@gmail.com</a>
+      <div class="c-layout">
+        <div class="reveal">
+          <div class="c-item">
+            <div class="c-icon">✉️</div>
+            <div><strong>Email</strong><a href="mailto:ahmedmohamed4.pro@gmail.com">ahmedmohamed4.pro@gmail.com</a></div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">📞</div>
+            <div><strong>Téléphone</strong><span>07 84 70 09 86</span></div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">📍</div>
+            <div><strong>Adresse</strong><span>1 Rue Brisout De Barneville<br />76100 Rouen</span></div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">💼</div>
+            <div><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/ahmed-mohamed-997594272" target="_blank">ahmed-mohamed-997594272</a></div>
+          </div>
+        </div>
 
-      <h2 style="margin-top:44px">Mes coordonnées</h2>
-      <div class="pline"></div>
-
-      <ul class="rows">
-        <li><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7.5l9 6 9-6"/></svg></div>
-          <div><b>Email</b><a class="detail" href="mailto:ahmedmohamed4.pro@gmail.com">ahmedmohamed4.pro@gmail.com</a></div></li>
-        <li><div class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
-          <div><b>Téléphone</b><span class="detail">07 84 70 09 86</span></div></li>
-        <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
-          <div><b>Adresse</b><span class="detail">1 Rue Brisout de Barneville,<br />76100 Rouen</span></div></li>
-        <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg></div>
-          <div><b>LinkedIn</b><a class="detail" href="https://www.linkedin.com/in/ahmed-mohamed-997594272" target="_blank">ahmed-mohamed-997594272</a></div></li>
-      </ul>
-    </div>
-
-    <div>
-      <h2>Ou via le formulaire</h2>
-      <div class="pline"></div>
-      <p style="margin:0 0 16px;color:var(--muted)">Je reçois votre message directement sur ma boîte mail.</p>
-
-      <div class="formbox">
-        <form id="cf" action="https://formspree.io/f/mzebyrye" method="POST">
-          <div class="grp"><label for="nom">Nom</label>
-            <input id="nom" type="text" name="nom" placeholder="Votre nom" required /></div>
-          <div class="grp"><label for="email">Adresse email</label>
-            <input id="email" type="email" name="_replyto" placeholder="votre@email.com" required /></div>
-          <div class="grp"><label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Votre message..." required></textarea></div>
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-          <button type="submit" class="btn btn-solid" style="border:none">Envoyer le message</button>
-          <div id="form-status" class="note"></div>
-        </form>
+        <div class="form-card reveal">
+          <h3>Envoyer un message</h3>
+          <form id="cf" action="https://formspree.io/f/mzebyrye" method="POST">
+            <div class="form-row">
+              <div class="form-group"><label for="nom">Nom <span class="req">*</span></label><input id="nom" type="text" name="nom" placeholder="Dupont" required /></div>
+              <div class="form-group"><label for="prenom">Prénom <span class="req">*</span></label><input id="prenom" type="text" name="prenom" placeholder="Marie" required /></div>
+            </div>
+            <div class="form-group"><label for="email">Email <span class="req">*</span></label><input id="email" type="email" name="email" placeholder="marie@exemple.fr" required /></div>
+            <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Votre message, proposition de stage…"></textarea></div>
+            <input type="hidden" name="_subject" value="Nouveau message — Portfolio Ahmed Mohamed" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <button type="submit" class="submit" id="cf-btn">ENVOYER LE MESSAGE</button>
+          </form>
+          <div class="form-success" id="cf-success">✅ Message envoyé ! Je vous répondrai rapidement.</div>
+          <div class="form-error" id="cf-error">❌ Erreur. Réessaie ou écris-moi directement par email.</div>
+        </div>
       </div>
     </div>
+  </section>
 
-  </div>
 </div>
 
 <footer>
@@ -80,38 +118,37 @@
 </footer>
 
 <script>
-  const form = document.getElementById('cf');
-  const status = document.getElementById('form-status');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 100);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: .1 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    status.className = 'note';
-    status.style.display = 'none';
-    const data = new FormData(form);
+  document.getElementById('cf').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const btn = document.getElementById('cf-btn');
+    const ok = document.getElementById('cf-success');
+    const err = document.getElementById('cf-error');
+    ok.style.display = 'none';
+    err.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours…';
     try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
+      const res = await fetch('https://formspree.io/f/mzebyrye', {
+        method: 'POST',
+        body: new FormData(this),
         headers: { 'Accept': 'application/json' }
       });
-      if (response.ok) {
-        status.innerHTML = '✅ Message envoyé ! Merci, je vous répondrai rapidement.';
-        status.className = 'note ok';
-        status.style.display = 'block';
-        form.reset();
-      } else {
-        status.innerHTML = '❌ Une erreur est survenue. Écrivez-moi directement : ahmedmohamed4.pro@gmail.com';
-        status.className = 'note err';
-        status.style.display = 'block';
-      }
-    } catch (error) {
-      status.innerHTML = 'En local, l\'envoi est bloqué (normal). En ligne, ce formulaire fonctionne.';
-      status.className = 'note err';
-      status.style.display = 'block';
-    }
-  }
-
-  form.addEventListener('submit', handleSubmit);
+      if (res.ok) { ok.style.display = 'block'; this.reset(); }
+      else { err.style.display = 'block'; }
+    } catch (ex) { err.style.display = 'block'; }
+    btn.disabled = false;
+    btn.textContent = 'ENVOYER LE MESSAGE';
+  });
 </script>
 
 </body>
