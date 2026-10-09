@@ -25,51 +25,106 @@
 <header class="phead">
   <div class="wrap">
     <h1>Veille technologique</h1>
-    <p>Ma veille pour le BTS SIO : un sujet choisi, des articles et des sources publiées régulièrement.</p>
+    <p>Ma veille pour le BTS SIO : un sujet choisi, des sources officielles et une analyse personnelle.</p>
   </div>
 </header>
 
 <div class="wrap page">
 
-  <p class="eyebrow" style="margin-bottom:10px">État : sujet validé</p>
+  <p class="eyebrow" style="margin-bottom:10px">État : sujet validé — mise à jour le 09/10/2026</p>
   <h2>Mon sujet de veille</h2>
   <div class="pline"></div>
 
   <p style="font-size:20px;font-weight:600;color:var(--ink);border-left:4px solid var(--blue);padding:14px 20px;background:#fafcff;border-radius:0 8px 8px 0">
-    « Comment la conteneurisation avec Docker transforme-t-elle le déploiement des services et les exigences de sécurité au sein des infrastructures système ? »
+    « Comment les passkeys (FIDO2) permettent-elles de rendre l'authentification résistante au phishing et de sécuriser les accès aux applications en entreprise ? »
   </p>
 
   <p style="color:var(--muted);max-width:680px">
-    Je m'intéresse à ce sujet notamment suite à mon stage de 1ère année, où j'ai utilisé Docker et
-    Traefik pour déployer et sécuriser des services. La conteneurisation change la façon d'installer,
-    de mettre à jour et de protéger les services dans une infrastructure.
+    Le phishing reste l'une des principales causes de compromission des comptes, et les mots de passe
+    comme les MFA classiques (SMS, code OTP) restent contournables. Les passkeys, fondées sur le standard
+    FIDO2 et le protocole WebAuthn, suppriment le secret partagé : la clé privée ne quitte jamais l'appareil.
+    C'est un sujet directement lié au métier SISR (gestion des identités, sécurité des accès, annuaire).
   </p>
 
-  <h2 style="margin-top:44px">Ce que je compte aborder</h2>
+  <h2 style="margin-top:44px">Mon plan de veille</h2>
   <div class="pline"></div>
-  <p style="color:var(--muted)">Contenu en cours de rédaction — je publierai mes articles ici prochainement.</p>
+
+  <p style="color:var(--muted)">Les thèmes suivis et la démarche mise en place pour cette veille.</p>
 
   <ul class="rows">
-    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 6h18v4H3zM6 10v3M10 10v3M14 10v3M18 10v3M4 18h16"/><circle cx="8" cy="20" r="1.2"/><circle cx="16" cy="20" r="1.2"/></svg></div>
-      <div><b>Introduction à la conteneurisation</b><span class="detail">Conteneurs, images, Dockerfile, différences avec la virtualisation.</span></div>
-      <div class="right">À venir</div></li>
-    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 3h16v5H4zM2 22V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14"/><path d="M9 12h6M9 16h4"/></svg></div>
-      <div><b>Docker en production</b><span class="detail">Déploiement de services, orchestration (Docker Compose), mise à l'échelle.</span></div>
-      <div class="right">À venir</div></li>
     <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v6c0 4.7-3.2 7.8-7.5 9-4.3-1.2-7.5-4.3-7.5-9V6z"/></svg></div>
-      <div><b>Sécurité des conteneurs</b><span class="detail">Images officielles et signatures, gestion des secrets, durcissement, surface d'attaque.</span></div>
-      <div class="right">À venir</div></li>
-    <li><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0zM12 8.8v3.2l2 1.2"/></svg></div>
-      <div><b>Sources et outils de veille</b><span class="detail">Flux RSS, newsletters, veille continue sur Docker et la sécurité.</span></div>
-      <div class="right">À venir</div></li>
-    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
-      <div><b>Retour d'expérience</b><span class="detail">Docker, Traefik et CrowdSec : ce que j'ai appris lors de mon stage.</span></div>
-      <div class="right">À venir</div></li>
+      <div><b>Axe 1 — Pourquoi maintenant ?</b><span class="detail">Le phishing, menace principale des accès ; limites des mots de passe et des MFA classiques (SMS, OTP).</span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M7 21h10"/></svg></div>
+      <div><b>Axe 2 — Comment ça résiste ?</b><span class="detail">Paire de clés (privée / publique), WebAuthn, clé liée au nom de domaine : impossible à rejouer sur un site usurpé.</span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 3h16v5H4zM2 22V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14"/><path d="M9 12h6M9 16h4"/></svg></div>
+      <div><b>Axe 3 — Déploiement en entreprise</b><span class="detail">Intégration à l'annuaire (Microsoft Entra ID), politiques d'accès conditionnel, migration depuis les mots de passe.</span></div></li>
   </ul>
+
+  <h3 style="margin-top:36px">Sources officielles suivies</h3>
+  <ul class="rows">
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v6c0 4.7-3.2 7.8-7.5 9-4.3-1.2-7.5-4.3-7.5-9V6z"/></svg></div>
+      <div><b>FIDO Alliance</b><span class="detail">Organisme à l'origine du standard FIDO2 / passkeys — <a class="dlc" href="https://fidoalliance.org/passkeys">fidoalliance.org</a></span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v6c0 4.7-3.2 7.8-7.5 9-4.3-1.2-7.5-4.3-7.5-9V6z"/></svg></div>
+      <div><b>W3C — spécification WebAuthn</b><span class="detail">Norme technique du protocole d'authentification — <a class="dlc" href="https://www.w3.org/TR/webauthn/">w3.org</a></span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v6c0 4.7-3.2 7.8-7.5 9-4.3-1.2-7.5-4.3-7.5-9V6z"/></svg></div>
+      <div><b>NIST — SP 800-63B</b><span class="detail">Cadre international exigeant un facteur résistant au phishing (AAL2 / AAL3) — <a class="dlc" href="https://pages.nist.gov/800-63-4/sp800-63b.html">nist.gov</a></span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v6c0 4.7-3.2 7.8-7.5 9-4.3-1.2-7.5-4.3-7.5-9V6z"/></svg></div>
+      <div><b>CISA</b><span class="detail">Agence américaine classant FIDO/WebAuthn comme le « standard or » de la MFA — <a class="dlc" href="https://www.cisa.gov/">cisa.gov</a></span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v6c0 4.7-3.2 7.8-7.5 9-4.3-1.2-7.5-4.3-7.5-9V6z"/></svg></div>
+      <div><b>ANSSI</b><span class="detail">Recommandations françaises sur l'authentification multifacteur — <a class="dlc" href="https://messervices.cyber.gouv.fr/">cyber.gouv.fr</a></span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v6c0 4.7-3.2 7.8-7.5 9-4.3-1.2-7.5-4.3-7.5-9V6z"/></svg></div>
+      <div><b>CNIL</b><span class="detail">Recommandation sur l'authentification multifacteur (mai 2025) — <a class="dlc" href="https://www.cnil.fr/fr/recommandation-mfa">cnil.fr</a></span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v6c0 4.7-3.2 7.8-7.5 9-4.3-1.2-7.5-4.3-7.5-9V6z"/></svg></div>
+      <div><b>Microsoft Learn — Entra ID</b><span class="detail">Documentation officielle du déploiement des passkeys en entreprise — <a class="dlc" href="https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-deploy-phishing-resistant-passwordless-authentication">learn.microsoft.com</a></span></div></li>
+  </ul>
+
+  <h3 style="margin-top:36px">Outils de collecte</h3>
+  <ul class="rows">
+    <li><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M3 12h3M18 12h3M12 3v3M12 18v3"/></svg></div>
+      <div><b>Alertes par mots-clés</b><span class="detail"><code>passkey OR passkeys FIDO2</code> · <code>passwordless entreprise</code> · <code>phishing-resistant authentification</code></span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12a7 7 0 0 1 14 0M3 12a9 9 0 0 1 18 0M8.5 20a4 4 0 0 1 7 0"/></svg></div>
+      <div><b>Flux RSS</b><span class="detail">Dossier « Veille Passkeys » dans un agrégateur (Feedly / Inoreader) : FIDO Alliance, ANSSI, Microsoft Security Blog.</span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+      <div><b>Fréquence d'analyse</b><span class="detail">Consultation des sources une fois par semaine, puis mise à jour du journal de veille.</span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
+      <div><b>Critères de sélection</b><span class="detail">Fiabilité (source officielle), actualité, pertinence (répond à la problématique), impact, vérification croisée.</span></div></li>
+  </ul>
+
+  <h2 style="margin-top:44px">Ma veille</h2>
+  <div class="pline"></div>
+  <p style="color:var(--muted)">Synthèse des informations collectées et qualifiées à partir des sources officielles.</p>
+
+  <ul class="rows">
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+      <div><b>Qu'est-ce qu'une passkey ?</b><span class="detail">Un identifiant FIDO2 reposant sur une paire de clés : la clé privée reste sur l'appareil, la clé publique est stockée par le service. Aucun mot de passe n'est transmis.</span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M7 21h10"/></svg></div>
+      <div><b>Pourquoi le phishing devient inefficace</b><span class="detail">La passkey est liée au nom de domaine légitime : un site usurpé ne peut pas rejouer l'authentification. Il n'y a plus de secret à voler.</span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg></div>
+      <div><b>Évolutions récentes</b><span class="detail">Le NIST impose ou recommande fortement le facteur résistant au phishing ; le CNIL a publié sa recommandation MFA (mai 2025) ; Microsoft fait des passkeys la méthode par défaut dans Entra ID à partir de septembre 2026.</span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.4 1 6.3L12 17l-5.5 2.6 1-6.3L3 8.9 9 8z"/></svg></div>
+      <div><b>Avantages et limites</b><span class="detail">Avantages : résistance au phishing, simplicité, rapidité. Limites : perte d'appareil, dépendance au fournisseur, compatibilité et coût de migration.</span></div></li>
+    <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+      <div><b>Impact pour le métier SISR</b><span class="detail">Déploiement et gestion des passkeys dans l'annuaire, politiques d'accès conditionnel, accompagnement des utilisateurs et migration des méthodes non résistantes au phishing.</span></div></li>
+  </ul>
+
+  <h3 style="margin-top:36px">Retour d'expérience — mon test personnel</h3>
+  <p style="color:var(--muted)">
+    J'ai testé les passkeys sur un compte GitHub (Windows Hello) et sur un compte Google (passkey
+    synchronisée sur téléphone). [À compléter avec mes observations : temps de connexion, confort,
+    différence entre passkey liée à l'appareil et passkey synchronisée.]
+  </p>
+
+  <h2 style="margin-top:44px">Ce que cette veille m'apporte</h2>
+  <div class="pline"></div>
+  <p style="color:var(--muted)">
+    [À compléter avec mes propres mots : ce que j'ai appris sur l'authentification résistante au phishing,
+    les compétences mobilisées (recherche, qualification de sources, analyse) et le lien avec mon futur
+    métier de technicien SISR.]
+  </p>
 
   <h2 style="margin-top:44px">Dernières publications</h2>
   <div class="pline"></div>
-  <p style="color:var(--muted)">Aucun article publié pour le moment.</p>
+  <p style="color:var(--muted)">Fiche de veille publiée le 09/10/2026. Prochaines mises à jour au fil de ma veille hebdomadaire.</p>
 
 </div>
 
