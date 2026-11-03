@@ -43,7 +43,7 @@
     Le phishing reste l'une des principales causes de compromission des comptes, et les mots de passe
     comme les MFA classiques (SMS, code OTP) restent contournables. Les passkeys, fondées sur le standard
     FIDO2 et le protocole WebAuthn, suppriment le secret partagé : la clé privée ne quitte jamais l'appareil.
-    C'est un sujet directement lié au métier SISR (gestion des identités, sécurité des accès, annuaire).
+    C'est un sujet à fort impact dans l'informatique et la sécurité (protection des identités, accès Zero Trust, élimination du credential stuffing).
   </p>
 
   <h2 style="margin-top:44px">Mon plan de veille</h2>
@@ -81,9 +81,9 @@
   <h3 style="margin-top:36px">Outils de collecte</h3>
   <ul class="rows">
     <li><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M3 12h3M18 12h3M12 3v3M12 18v3"/></svg></div>
-      <div><b>Alertes par mots-clés</b><span class="detail"><code>passkey OR passkeys FIDO2</code> · <code>passwordless entreprise</code> · <code>phishing-resistant authentification</code></span></div></li>
+      <div><b>Alertes par mots-clés</b><span class="detail"><code>passkey</code> · <code>FIDO2</code> · <code>authentification sans mot de passe</code> · <code>phishing</code></span></div></li>
     <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12a7 7 0 0 1 14 0M3 12a9 9 0 0 1 18 0M8.5 20a4 4 0 0 1 7 0"/></svg></div>
-      <div><b>Flux RSS</b><span class="detail">Dossier « Veille Passkeys » dans un agrégateur (Feedly / Inoreader) : FIDO Alliance, ANSSI, Microsoft Security Blog.</span></div></li>
+      <div><b>Flux RSS</b><span class="detail">Agrégateur Feedly avec le dossier « Veille - passkey - cybersécurité » (sources : FIDO Alliance, ANSSI, CERT-FR, Microsoft Security Blog).</span></div></li>
     <li><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
       <div><b>Fréquence d'analyse</b><span class="detail">Consultation des sources une fois par semaine, puis mise à jour du journal de veille.</span></div></li>
     <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
@@ -104,22 +104,18 @@
     <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.4 1 6.3L12 17l-5.5 2.6 1-6.3L3 8.9 9 8z"/></svg></div>
       <div><b>Avantages et limites</b><span class="detail">Avantages : résistance au phishing, simplicité, rapidité. Limites : perte d'appareil, dépendance au fournisseur, compatibilité et coût de migration.</span></div></li>
     <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
-      <div><b>Impact pour le métier SISR</b><span class="detail">Déploiement et gestion des passkeys dans l'annuaire, politiques d'accès conditionnel, accompagnement des utilisateurs et migration des méthodes non résistantes au phishing.</span></div></li>
+      <div><b>Impact dans l'informatique et la sécurité</b><span class="detail">Éradication des cyberattaques par vol d'identifiants, passage à une sécurité Zero Trust native, suppression des coûts de gestion des mots de passe et conformité aux exigences des agences de sécurité.</span></div></li>
   </ul>
 
   <h3 style="margin-top:36px">Retour d'expérience — mon test personnel</h3>
-  <p style="color:var(--muted)">
-    J'ai testé les passkeys sur un compte GitHub (Windows Hello) et sur un compte Google (passkey
-    synchronisée sur téléphone). [À compléter avec mes observations : temps de connexion, confort,
-    différence entre passkey liée à l'appareil et passkey synchronisée.]
+  <p style="color:var(--muted);line-height:1.6">
+    J'ai configuré et testé une passkey sur mon compte <strong>GitHub</strong> personnel en utilisant <strong>Windows Hello</strong> (authentification par code PIN lié au module de sécurité matériel TPM du PC). Lors de la connexion, le choix de l'option « Continuez avec le code d'accès » permet une authentification instantanée en moins d'une seconde, sans aucun mot de passe à saisir. Ce test confirme le principe d'une <em>passkey liée à l'appareil (device-bound)</em> : la clé privée reste protégée localement dans le processeur cryptographique et l'authentification est immunisée contre le phishing (vérification du domaine par le navigateur). Un second test sur compte Google via smartphone sera réalisé pour comparer avec une passkey synchronisée.
   </p>
 
   <h2 style="margin-top:44px">Ce que cette veille m'apporte</h2>
   <div class="pline"></div>
-  <p style="color:var(--muted)">
-    [À compléter avec mes propres mots : ce que j'ai appris sur l'authentification résistante au phishing,
-    les compétences mobilisées (recherche, qualification de sources, analyse) et le lien avec mon futur
-    métier de technicien SISR.]
+  <p style="color:var(--muted);line-height:1.6">
+    Cette veille m'a permis de comprendre concrètement la transition majeure de la cybersécurité moderne : l'abandon progressif des mots de passe au profit de la cryptographie asymétrique FIDO2/WebAuthn. Elle m'a apporté une méthodologie rigoureuse de collecte automatisée (alertes, flux RSS Feedly) et d'évaluation critique de sources officielles (W3C, ANSSI, NIST, CISA). Sur le plan technique, elle met en lumière les transformations profondes de l'informatique et de la sécurité des accès, où la résistance native au phishing devient le standard indispensable de protection des systèmes d'information.
   </p>
 
   <h2 style="margin-top:44px">Dernières publications</h2>
